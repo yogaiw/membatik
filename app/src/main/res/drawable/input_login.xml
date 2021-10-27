@@ -1,0 +1,25 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:state_window_focused="false"
+        android:state_enabled="true"
+        android:drawable="@drawable/rounded_input_text" />
+    <item
+        android:state_window_focused="false"
+        android:state_enabled="false"
+        android:drawable="@drawable/rounded_input_text" />
+    <item
+        android:state_pressed="true"
+        android:drawable="@drawable/rounded_input_text" />
+    <item
+        android:state_enabled="true"
+        :state_focused="true"
+        android:drawable="@drawable/rounded_input_text_focused" />
+    <item
+        android:state_enabled="true"
+        android:drawable="@drawable/rounded_input_text" />
+    <item
+        android:state_focused="true"
+        android:drawable="@drawable/rounded_input_text_focused" />
+    <item
+        android:drawable="@drawable/rounded_input_text" />
+</selector>
