@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/page_home"
+        android:enabled="true"
+        android:icon="@drawable/tab_home"
+        android:title="Home"/>
+    <item
+        android:id="@+id/page_course"
+        android:enabled="true"
+        android:icon="@drawable/tab_course"
+        android:title="Course"/>
+    <item
+        android:id="@+id/page_fav"
+        android:enabled="true"
+        android:icon="@drawable/tab_fav"
+        android:title="Favorit"/>
+    <item
+        android:id="@+id/page_akun"
+        android:enabled="true"
+        android:icon="@drawable/tab_akun"
+        android:title="Akun"/>
+</menu>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200sp"
+    android:layout_height="wrap_content"
+    android:id="@+id/cv_item"
+    android:orientation="vertical"
+    android:background="@drawable/produk_container"
+    android:layout_marginRight="10sp"
+    android:padding="30sp">
+
+    <TextView
+        android:id="@+id/tv_judulproduk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Batik Banyumas"
+        android:textColor="@color/black"
+        android:textSize="15sp" />
+
+    <ImageView
+        android:id="@+id/iv_gambar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dummy_image"
+        android:layout_marginTop="5sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_judulproduk"/>
+
+    <TextView
+        android:id="@+id/tv_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="harga"
+        android:layout_marginTop="5sp"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/iv_gambar"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
