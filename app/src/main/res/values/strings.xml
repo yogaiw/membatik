@@ -12,4 +12,16 @@
         <item>15000</item>
         <item>70000</item>
     </string-array>
+
+    <string-array name="course_judul">
+        <item>Belajar Menenun</item>
+        <item>Belajar Melukis</item>
+        <item>Belajar Mencitaimu Aww</item>
+    </string-array>
+
+    <string-array name="course_harga">
+        <item>80000</item>
+        <item>100000</item>
+        <item>Free aww</item>
+    </string-array>
 </resources>

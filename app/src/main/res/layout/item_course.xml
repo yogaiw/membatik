@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/produk_container"
+    android:layout_marginBottom="30sp"
+    android:paddingBottom="20sp">
+
+    <ImageView
+        android:id="@+id/course_image_header"
+        android:layout_width="match_parent"
+        android:layout_height="180sp"
+        android:src="@drawable/dummy_course"
+        android:scaleType="centerCrop"/>
+
+    <TextView
+        android:id="@+id/course_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Judul Course"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="15sp"
+        android:layout_marginLeft="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/course_image_header"/>
+
+    <Button
+        android:id="@+id/btn_play"
+        android:layout_width="30sp"
+        android:layout_height="30sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginLeft="20sp"
+        android:background="@drawable/ic_course_play"
+        app:layout_constraintTop_toBottomOf="@id/course_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tonton Video"
+        android:layout_marginLeft="15sp"
+        app:layout_constraintStart_toEndOf="@id/btn_play"
+        app:layout_constraintTop_toTopOf="@id/btn_play"
+        app:layout_constraintBottom_toBottomOf="@id/btn_play"/>
+
+    <TextView
+        android:id="@+id/tv_course_harga"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga"
+        android:layout_marginTop="40sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="#0F3797"
+        android:textSize="15sp"
+        android:layout_marginRight="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/course_image_header"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
