@@ -4,10 +4,12 @@
     <string-array name="data_judul">
         <item>Batik Sokaraja</item>
         <item>Batik Banyumas</item>
+        <item>Batik Solo</item>
     </string-array>
 
     <string-array name="data_harga">
         <item>13000</item>
         <item>15000</item>
+        <item>70000</item>
     </string-array>
 </resources>
