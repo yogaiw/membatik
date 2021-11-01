@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Membatik">
         <activity
+            android:name=".CourseDetailActivity"
+            android:exported="true" />
+        <activity
             android:name=".dashboard.CourseActivity"
             android:exported="true" />
         <activity

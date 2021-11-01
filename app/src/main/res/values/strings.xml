@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Membatik</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra dolor ut sed maecenas. Risus integer placerat cursus leo.</string>
 
     <string-array name="data_judul">
         <item>Batik Sokaraja</item>
