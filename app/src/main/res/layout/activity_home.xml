@@ -82,6 +82,7 @@
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
 
     <Button
+        android:id="@+id/btn_buat_batik"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Buat Batik Anda Sendiri"

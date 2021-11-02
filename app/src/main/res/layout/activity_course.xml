@@ -17,8 +17,8 @@
 
     <Button
         android:id="@+id/btn_back"
-        android:layout_width="50sp"
-        android:layout_height="50sp"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
         android:background="@drawable/ic_back"
         android:layout_marginLeft="15sp"
         android:layout_marginTop="20sp"
@@ -29,12 +29,12 @@
         android:id="@+id/header_course"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30sp"
         android:textColor="@color/black"
         android:fontFamily="@font/poppins_bold"
-        android:textSize="20sp"
+        android:textSize="18sp"
         android:text="Membatix"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
@@ -43,8 +43,8 @@
         android:layout_height="30sp"
         android:background="@drawable/ic_chart"
         android:layout_marginRight="15sp"
-        android:layout_marginTop="30sp"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/header_course"
+        app:layout_constraintBottom_toBottomOf="@id/header_course"
         app:layout_constraintEnd_toEndOf="parent"/>
 
     <androidx.recyclerview.widget.RecyclerView

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.asylum.membatik.CustomBatikActivity
 import com.asylum.membatik.R
 import com.asylum.membatik.adapter.ProdukAdapter
 import com.asylum.membatik.model.ProdukModel
@@ -37,6 +38,10 @@ class HomeActivity : AppCompatActivity() {
                 }
                 else -> false
             }
+        }
+
+        btn_buat_batik.setOnClickListener {
+            startActivity(Intent(this, CustomBatikActivity::class.java))
         }
     }
 
