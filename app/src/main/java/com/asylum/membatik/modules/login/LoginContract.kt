@@ -6,6 +6,7 @@ interface LoginContract {
         fun showMessage(msg: String)
         fun processingLogin(isProcessingLogin: Boolean)
         fun goToDashboard()
+        fun goToRegister()
     }
 
     interface Presenter {
