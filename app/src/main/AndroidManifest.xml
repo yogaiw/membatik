@@ -22,10 +22,10 @@
             android:name=".dashboard.HomeActivity"
             android:exported="true" />
         <activity
-            android:name=".DaftarActivity"
+            android:name=".modules.register.DaftarActivity"
             android:exported="true" />
         <activity
-            android:name=".MainActivity"
+            android:name=".modules.login.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

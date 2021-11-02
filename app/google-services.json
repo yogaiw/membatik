@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "423540958007",
+    "project_id": "membatik-ecc74",
+    "storage_bucket": "membatik-ecc74.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:423540958007:android:d1aec2a15bd6ebee99f0b2",
+        "android_client_info": {
+          "package_name": "com.asylum.membatik"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "423540958007-ihsi6eqh02pikku89b93rrqos3ti4cpp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.asylum.membatik",
+            "certificate_hash": "c3127a17453aed3b22f6f7ffff8dd2821ce809d1"
+          }
+        },
+        {
+          "client_id": "423540958007-f1bs51kvuf1pebuhsr77st7kep47kogc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQdNHc0MWlzU5yxbHpa5X6jBrtjGdfZIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "423540958007-f1bs51kvuf1pebuhsr77st7kep47kogc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
