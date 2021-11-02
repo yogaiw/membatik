@@ -1,10 +1,11 @@
-package com.asylum.membatik
+package com.asylum.membatik.modules.login
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.asylum.membatik.R
 import com.asylum.membatik.dashboard.HomeActivity
-import kotlinx.android.synthetic.main.activity_daftar.*
+import com.asylum.membatik.modules.register.DaftarActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
