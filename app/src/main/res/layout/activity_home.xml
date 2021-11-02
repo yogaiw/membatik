@@ -10,6 +10,7 @@
     android:paddingTop="50sp">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/home_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:menu="@menu/bottom_nav_menu"
@@ -76,6 +77,23 @@
         android:layout_marginLeft="35sp"
         android:layout_marginTop="10sp"
         app:layout_constraintTop_toBottomOf="@+id/tv_produkterbaru"
-        tools:listitem="@layout/item_produk"/>
+        tools:listitem="@layout/item_produk"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    <Button
+        android:id="@+id/btn_buat_batik"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Buat Batik Anda Sendiri"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:drawableRight="@drawable/ic_next_24"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="10sp"
+        android:paddingHorizontal="50sp"
+        android:layout_marginHorizontal="30sp"
+        android:background="@drawable/ic_btn_buatbatikanda"
+        app:layout_constraintTop_toBottomOf="@id/rv_produk"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

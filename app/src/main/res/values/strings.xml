@@ -1,13 +1,28 @@
 <resources>
     <string name="app_name">Membatik</string>
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pharetra dolor ut sed maecenas. Risus integer placerat cursus leo.</string>
 
     <string-array name="data_judul">
         <item>Batik Sokaraja</item>
         <item>Batik Banyumas</item>
+        <item>Batik Solo</item>
     </string-array>
 
     <string-array name="data_harga">
         <item>13000</item>
         <item>15000</item>
+        <item>70000</item>
+    </string-array>
+
+    <string-array name="course_judul">
+        <item>Belajar Menenun</item>
+        <item>Belajar Melukis</item>
+        <item>Belajar Mencitaimu Aww</item>
+    </string-array>
+
+    <string-array name="course_harga">
+        <item>80000</item>
+        <item>100000</item>
+        <item>Free aww</item>
     </string-array>
 </resources>
