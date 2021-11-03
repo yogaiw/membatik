@@ -4,207 +4,181 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".DetailProduk">
+    tools:context=".modules.detailproduct.DetailProduk">
 
     <Button
         android:id="@+id/btn_back"
         android:layout_width="40sp"
         android:layout_height="40sp"
-        android:background="@drawable/ic_back"
         android:layout_marginLeft="15sp"
         android:layout_marginTop="20sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ToggleButton
         android:layout_width="20sp"
         android:layout_height="20sp"
         android:layout_marginTop="30sp"
         android:layout_marginEnd="30sp"
-        android:textOn=""
-        android:textOff=""
         android:background="@drawable/selector_fav_detail"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        android:textOff=""
+        android:textOn=""
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/image_produk"
         android:layout_width="match_parent"
         android:layout_height="300sp"
-        android:src="@drawable/no_image"
-        android:layout_marginTop="20sp"
         android:layout_marginHorizontal="30sp"
-        android:scaleType="centerCrop"
-        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        android:layout_marginTop="20sp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/no_image"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/btn_back" />
 
     <TextView
         android:id="@+id/tv_judul_produk_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
         android:fontFamily="@font/poppins_bold"
+        android:text="Judul Produk"
         android:textColor="@color/black"
         android:textSize="20sp"
-        android:text="Judul Produk"
-        android:layout_marginTop="20sp"
         app:layout_constraintStart_toStartOf="@id/image_produk"
-        app:layout_constraintTop_toBottomOf="@id/image_produk"/>
+        app:layout_constraintTop_toBottomOf="@id/image_produk" />
 
     <TextView
         android:id="@+id/tv_harga_produk_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="30sp"
+        android:fontFamily="@font/poppins_bold"
         android:text="Harga"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_bold"
-        android:layout_marginEnd="30sp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/tv_judul_produk_detail"
-        app:layout_constraintTop_toTopOf="@id/tv_judul_produk_detail"/>
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_judul_produk_detail" />
 
     <TextView
         android:id="@+id/tv_toko_detail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Nama Toko"
         android:layout_marginEnd="30sp"
-        app:layout_constraintTop_toBottomOf="@id/tv_judul_produk_detail"
-        app:layout_constraintStart_toStartOf="@id/tv_judul_produk_detail"/>
+        android:text="Nama Toko"
+        app:layout_constraintStart_toStartOf="@id/tv_judul_produk_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_judul_produk_detail" />
+
 
     <TextView
         android:id="@+id/tv_pilih_warna"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20sp"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingStart="30sp"
         android:text="Pilih Warna"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_bold"
-        android:layout_marginTop="20sp"
-        app:layout_constraintStart_toStartOf="@id/tv_toko_detail"
-        app:layout_constraintTop_toBottomOf="@id/tv_toko_detail"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_toko_detail"
+        app:layout_constraintWidth_percent="0.5" />
 
     <TextView
         android:id="@+id/tv_pilih_ukuran"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:paddingStart="15sp"
         android:text="Pilih Ukuran"
         android:textColor="@color/black"
-        android:fontFamily="@font/poppins_bold"
-        app:layout_constraintTop_toTopOf="@id/tv_pilih_warna"
         app:layout_constraintBottom_toBottomOf="@id/tv_pilih_warna"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/tv_pilih_warna"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/tv_pilih_warna"
+        app:layout_constraintWidth_percent="0.5" />
 
-    <RadioGroup
-        android:id="@+id/rg_warna"
-        android:layout_width="wrap_content"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/wrapperRdo"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintEnd_toStartOf="@id/tv_pilih_ukuran"
+        app:layout_constraintTop_toBottomOf="@id/tv_pilih_warna"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_pilih_warna">
-        <RadioButton
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_weight="1"
-            android:layout_marginEnd="5sp"
-            android:background="@drawable/button_circle"
-            android:backgroundTint="#A1A7AD"
-            android:button="@color/transparent"/>
-        <RadioButton
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="5sp"
-            android:background="@drawable/button_circle"
-            android:backgroundTint="#C84E61"
-            android:button="@color/transparent"/>
-        <RadioButton
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="5sp"
-            android:background="@drawable/button_circle"
-            android:backgroundTint="#866945"
-            android:button="@color/transparent"/>
-    </RadioGroup>
+        android:layout_marginTop="4sp"
+        app:layout_constraintEnd_toEndOf="parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvColor"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:paddingStart="30sp"
+            android:paddingEnd="8sp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
 
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10sp"
-        android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="@id/tv_pilih_ukuran"
-        app:layout_constraintTop_toBottomOf="@id/tv_pilih_ukuran">
-        <RadioButton
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_weight="1"
-            android:layout_marginEnd="5sp"
-            android:textAlignment="center"
-            android:fontFamily="@font/poppins_bold"
-            android:text="M"
-            android:textColor="@drawable/selector_text_color"
-            android:background="@drawable/selector_ukuran"
-            android:button="@color/transparent"/>
-        <RadioButton
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="5sp"
-            android:textAlignment="center"
-            android:fontFamily="@font/poppins_bold"
-            android:text="L"
-            android:textColor="@drawable/selector_text_color"
-            android:background="@drawable/selector_ukuran"
-            android:button="@color/transparent"/>
-        <RadioButton
-            android:layout_width="40sp"
-            android:layout_height="40sp"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="5sp"
-            android:textAlignment="center"
-            android:fontFamily="@font/poppins_bold"
-            android:text="XL"
-            android:textColor="@drawable/selector_text_color"
-            android:background="@drawable/selector_ukuran"
-            android:button="@color/transparent"/>
-    </RadioGroup>
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.5"
+            app:spanCount="3"
+            tools:listitem="@layout/item_radio_button_color">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvSize"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10sp"
+            android:paddingEnd="30sp"
+            android:paddingStart="8sp"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/rvColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:spanCount="3"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_radio_button_size" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
     <TextView
         android:id="@+id/tv_deskripsi_id"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/black"
-        android:text="Deskripsi"
         android:layout_marginTop="20sp"
+        android:fontFamily="@font/poppins_bold"
+        android:text="Deskripsi"
+        android:textColor="@color/black"
+        android:layout_marginStart="30sp"
         app:layout_constraintStart_toStartOf="@id/tv_pilih_warna"
-        app:layout_constraintTop_toBottomOf="@id/rg_warna"/>
+        app:layout_constraintTop_toBottomOf="@id/wrapperRdo" />
 
     <TextView
         android:id="@+id/tv_deskripsi_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
         android:fontFamily="@font/poppins_medium"
         android:text="@string/lorem_ipsum"
-        android:layout_marginHorizontal="30sp"
-        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_id"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_id" />
 
     <Button
         android:id="@+id/btn_tambah_keranjang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:layout_marginTop="20sp"
         android:background="@drawable/button_blue"
+        android:fontFamily="@font/poppins_bold"
         android:text="Tambah ke Keranjang"
         android:textColor="@color/white"
-        android:fontFamily="@font/poppins_bold"
-        android:layout_marginTop="20sp"
-        android:layout_marginHorizontal="30sp"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_text"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_text" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

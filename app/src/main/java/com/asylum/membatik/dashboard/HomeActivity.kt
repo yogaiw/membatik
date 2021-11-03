@@ -11,6 +11,7 @@ import com.asylum.membatik.R
 import com.asylum.membatik.adapter.ProdukAdapter
 import com.asylum.membatik.model.ProdukModel
 import com.asylum.membatik.modules.account.AccountActivity
+import com.asylum.membatik.modules.detailproduct.DetailProduk
 import com.asylum.membatik.modules.home.HomeContract
 import com.asylum.membatik.modules.home.HomePresenter
 import kotlinx.android.synthetic.main.activity_home.*
@@ -67,7 +68,11 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
 
     override fun setRecyclerView(list: List<ProdukModel>) {
         rv_produk.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
-        val listMyDataAdapter = ProdukAdapter(list, this)
+        val listMyDataAdapter = ProdukAdapter(list) {
+            val intent = Intent(this, DetailProduk::class.java)
+            intent.putExtra(DetailProduk.EXTRA_DATA_PRODUCT, it)
+            startActivity(intent)
+        }
         rv_produk.adapter = listMyDataAdapter
     }
 

@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Membatik">
         <activity
-            android:name=".DetailProduk"
+            android:name=".modules.detailproduct.DetailProduk"
             android:exported="true" />
         <activity
             android:name=".modules.products.AllProductActivity"
