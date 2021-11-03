@@ -71,6 +71,10 @@ class HomeActivity : AppCompatActivity() {
                     startActivity(Intent(this, CourseActivity::class.java))
                     true
                 }
+                R.id.page_akun -> {
+                    startActivity(Intent(this, AccountActivity::class.java))
+                    true
+                }
                 else -> false
             }
         }
