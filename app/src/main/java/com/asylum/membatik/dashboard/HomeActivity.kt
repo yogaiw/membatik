@@ -20,32 +20,18 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+        navbarInit()
+
         rv_produk.setHasFixedSize(true)
         listProduk.addAll(getListProduk())
         showRecyclerList()
-
-        home_nav.selectedItemId = R.id.page_home
-
-        home_nav.setOnItemSelectedListener {
-            when(it.itemId) {
-                R.id.page_home -> {
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    true
-                }
-                R.id.page_course -> {
-                    startActivity(Intent(this, CourseActivity::class.java))
-                    true
-                }
-                else -> false
-            }
-        }
 
         btn_buat_batik.setOnClickListener {
             startActivity(Intent(this, CustomBatikActivity::class.java))
         }
     }
 
-    fun getListProduk(): ArrayList<ProdukModel> {
+    private fun getListProduk(): ArrayList<ProdukModel> {
         val dataJudul = resources.getStringArray(R.array.data_judul)
         val dataHarga = resources.getStringArray(R.array.data_harga)
 
@@ -65,5 +51,23 @@ class HomeActivity : AppCompatActivity() {
         rv_produk.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,false)
         val listMyDataAdapter = ProdukAdapter(listProduk, this)
         rv_produk.adapter = listMyDataAdapter
+    }
+
+    private fun navbarInit() {
+        home_nav.selectedItemId = R.id.page_home
+
+        home_nav.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.page_home -> {
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    true
+                }
+                R.id.page_course -> {
+                    startActivity(Intent(this, CourseActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }

@@ -20,25 +20,11 @@ class CourseActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_course)
 
+        navbarInit()
+
         rv_course.setHasFixedSize(true)
         listCourse.addAll(getListCourse())
         showRecyclerList()
-
-        course_nav.selectedItemId = R.id.page_course
-
-        course_nav.setOnItemSelectedListener {
-            when(it.itemId) {
-                R.id.page_home -> {
-                    startActivity(Intent(this, HomeActivity::class.java))
-                    true
-                }
-                R.id.page_course -> {
-                    startActivity(Intent(this, CourseActivity::class.java))
-                    true
-                }
-                else -> false
-            }
-        }
     }
 
     private fun getListCourse(): ArrayList<CourseModel> {
@@ -61,5 +47,23 @@ class CourseActivity : AppCompatActivity() {
         rv_course.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
         val listMyDataAdapter = CourseAdapter(listCourse, this)
         rv_course.adapter = listMyDataAdapter
+    }
+
+    private fun navbarInit() {
+        course_nav.selectedItemId = R.id.page_course
+
+        course_nav.setOnItemSelectedListener {
+            when(it.itemId) {
+                R.id.page_home -> {
+                    startActivity(Intent(this, HomeActivity::class.java))
+                    true
+                }
+                R.id.page_course -> {
+                    startActivity(Intent(this, CourseActivity::class.java))
+                    true
+                }
+                else -> false
+            }
+        }
     }
 }
