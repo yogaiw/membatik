@@ -21,11 +21,14 @@
         android:maxWidth="100dip"
         android:minLines="2"/>
 
-    <Button
+    <ToggleButton
         android:layout_width="40sp"
         android:layout_height="40sp"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="@drawable/ic_fav_produk" />
+        android:button="@color/transparent"
+        android:textOn=""
+        android:textOff=""
+        android:background="@drawable/selector_fav" />
 
     <Button
         android:layout_width="40sp"

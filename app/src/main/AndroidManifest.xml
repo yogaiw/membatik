@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Membatik">
         <activity
+            android:name=".AllProductActivity"
+            android:exported="true" />
+        <activity
             android:name=".dashboard.AccountActivity"
             android:exported="true" />
         <activity
