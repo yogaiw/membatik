@@ -1,7 +1,9 @@
 package com.asylum.membatik.model
 
 import android.os.Parcelable
+import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentId
+import com.google.firebase.firestore.Exclude
 import kotlinx.android.parcel.Parcelize
 
 @Parcelize
@@ -15,5 +17,7 @@ data class ProdukModel(
     var images: String = "",
     var userId: String = "",
     var price: Int = 0,
+    var createdAt : Timestamp = Timestamp.now(),
+    @Exclude @set:Exclude @get:Exclude
     var user: UserModel? = null
 ):Parcelable

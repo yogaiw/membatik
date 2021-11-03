@@ -3,17 +3,15 @@ package com.asylum.membatik.dashboard
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.asylum.membatik.AllProductActivity
+import com.asylum.membatik.modules.products.AllProductActivity
 import com.asylum.membatik.CustomBatikActivity
 import com.asylum.membatik.R
 import com.asylum.membatik.adapter.ProdukAdapter
 import com.asylum.membatik.model.ProdukModel
 import com.asylum.membatik.modules.home.HomeContract
 import com.asylum.membatik.modules.home.HomePresenter
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity(), HomeContract.View {

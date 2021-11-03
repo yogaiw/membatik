@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AllProductActivity">
+    tools:context=".modules.products.AllProductActivity">
 
     <Button
         android:id="@+id/btn_back"
@@ -41,12 +41,13 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_allproduct"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="20sp"
         android:layout_marginHorizontal="30sp"
         app:layout_constraintTop_toBottomOf="@id/header_allproduct"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         tools:listitem="@layout/item_produk"
         app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
