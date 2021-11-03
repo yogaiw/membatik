@@ -7,6 +7,7 @@ interface AccountContract {
         fun setOnClickListener()
         fun goToLogin()
         fun setUserProfile(user: UserModel)
+        fun setMemberSince(since : String)
     }
 
     interface Presenter {
