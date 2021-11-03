@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="170sp"
     android:layout_height="wrap_content"
-    android:id="@+id/cv_item"
+    android:id="@+id/produk_item"
     android:orientation="vertical"
     android:background="@drawable/produk_container"
     android:layout_marginRight="10sp"

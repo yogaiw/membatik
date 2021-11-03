@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailProduk">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/ic_back"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <ToggleButton
+        android:layout_width="20sp"
+        android:layout_height="20sp"
+        android:layout_marginTop="30sp"
+        android:layout_marginEnd="30sp"
+        android:textOn=""
+        android:textOff=""
+        android:background="@drawable/selector_fav_detail"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <ImageView
+        android:id="@+id/image_produk"
+        android:layout_width="match_parent"
+        android:layout_height="300sp"
+        android:src="@drawable/no_image"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="30sp"
+        android:scaleType="centerCrop"
+        app:layout_constraintTop_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_judul_produk_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:text="Judul Produk"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="@id/image_produk"
+        app:layout_constraintTop_toBottomOf="@id/image_produk"/>
+
+    <TextView
+        android:id="@+id/tv_harga_produk_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Harga"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginEnd="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tv_judul_produk_detail"
+        app:layout_constraintTop_toTopOf="@id/tv_judul_produk_detail"/>
+
+    <TextView
+        android:id="@+id/tv_toko_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nama Toko"
+        android:layout_marginEnd="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_judul_produk_detail"
+        app:layout_constraintStart_toStartOf="@id/tv_judul_produk_detail"/>
+
+    <TextView
+        android:id="@+id/tv_pilih_warna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Warna"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="@id/tv_toko_detail"
+        app:layout_constraintTop_toBottomOf="@id/tv_toko_detail"/>
+
+    <TextView
+        android:id="@+id/tv_pilih_ukuran"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pilih Ukuran"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        app:layout_constraintTop_toTopOf="@id/tv_pilih_warna"
+        app:layout_constraintBottom_toBottomOf="@id/tv_pilih_warna"
+        app:layout_constraintStart_toEndOf="@id/tv_pilih_warna"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <RadioGroup
+        android:id="@+id/rg_warna"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toStartOf="@id/tv_pilih_ukuran"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_pilih_warna">
+        <RadioButton
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5sp"
+            android:background="@drawable/button_circle"
+            android:backgroundTint="#A1A7AD"
+            android:button="@color/transparent"/>
+        <RadioButton
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5sp"
+            android:background="@drawable/button_circle"
+            android:backgroundTint="#C84E61"
+            android:button="@color/transparent"/>
+        <RadioButton
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5sp"
+            android:background="@drawable/button_circle"
+            android:backgroundTint="#866945"
+            android:button="@color/transparent"/>
+    </RadioGroup>
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10sp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="@id/tv_pilih_ukuran"
+        app:layout_constraintTop_toBottomOf="@id/tv_pilih_ukuran">
+        <RadioButton
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:layout_marginEnd="5sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold"
+            android:text="M"
+            android:textColor="@drawable/selector_text_color"
+            android:background="@drawable/selector_ukuran"
+            android:button="@color/transparent"/>
+        <RadioButton
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold"
+            android:text="L"
+            android:textColor="@drawable/selector_text_color"
+            android:background="@drawable/selector_ukuran"
+            android:button="@color/transparent"/>
+        <RadioButton
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_weight="1"
+            android:layout_marginHorizontal="5sp"
+            android:textAlignment="center"
+            android:fontFamily="@font/poppins_bold"
+            android:text="XL"
+            android:textColor="@drawable/selector_text_color"
+            android:background="@drawable/selector_ukuran"
+            android:button="@color/transparent"/>
+    </RadioGroup>
+    <TextView
+        android:id="@+id/tv_deskripsi_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:text="Deskripsi"
+        android:layout_marginTop="20sp"
+        app:layout_constraintStart_toStartOf="@id/tv_pilih_warna"
+        app:layout_constraintTop_toBottomOf="@id/rg_warna"/>
+
+    <TextView
+        android:id="@+id/tv_deskripsi_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_medium"
+        android:text="@string/lorem_ipsum"
+        android:layout_marginHorizontal="30sp"
+        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_id"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_tambah_keranjang"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_blue"
+        android:text="Tambah ke Keranjang"
+        android:textColor="@color/white"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginTop="20sp"
+        android:layout_marginHorizontal="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_deskripsi_text"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
