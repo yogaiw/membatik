@@ -6,11 +6,9 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asylum.membatik.R
 import com.asylum.membatik.adapter.CourseAdapter
-import com.asylum.membatik.adapter.ProdukAdapter
 import com.asylum.membatik.model.CourseModel
-import com.asylum.membatik.model.ProdukModel
+import com.asylum.membatik.modules.account.AccountActivity
 import kotlinx.android.synthetic.main.activity_course.*
-import kotlinx.android.synthetic.main.activity_home.*
 
 class CourseActivity : AppCompatActivity() {
 

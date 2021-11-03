@@ -14,7 +14,7 @@
             android:name=".modules.products.AllProductActivity"
             android:exported="true" />
         <activity
-            android:name=".dashboard.AccountActivity"
+            android:name=".modules.account.AccountActivity"
             android:exported="true" />
         <activity
             android:name=".CustomBatikActivity"
