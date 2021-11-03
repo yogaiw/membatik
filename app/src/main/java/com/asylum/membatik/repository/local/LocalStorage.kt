@@ -31,4 +31,9 @@ object LocalStorage {
         init(context)
         return Hawk.get(USER, UserModel())
     }
+
+    fun logout(context: Context){
+        init(context)
+        Hawk.deleteAll()
+    }
 }

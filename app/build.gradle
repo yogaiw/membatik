@@ -62,4 +62,7 @@ dependencies {
     // hawk store
     implementation "com.orhanobut:hawk:2.0.1"
 
+    // coil image loader
+    implementation("io.coil-kt:coil:1.4.0")
+
 }

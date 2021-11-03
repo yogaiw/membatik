@@ -1,6 +1,5 @@
 package com.asylum.membatik.adapter
 
-import android.content.ContentValues.TAG
 import android.content.Context
 import android.content.Intent
 import android.util.Log
@@ -12,11 +11,12 @@ import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.asylum.membatik.DetailProduk
+import coil.load
 import com.asylum.membatik.R
 import com.asylum.membatik.model.ProdukModel
 import kotlinx.android.synthetic.main.item_produk.view.*
 
-class ProdukAdapter(private val listMyData: ArrayList<ProdukModel>, val context: Context) : RecyclerView.Adapter<ProdukAdapter.ListViewHolder>() {
+class ProdukAdapter(private val listMyData: List<ProdukModel>, val context: Context) : RecyclerView.Adapter<ProdukAdapter.ListViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_produk, parent, false)
@@ -26,24 +26,17 @@ class ProdukAdapter(private val listMyData: ArrayList<ProdukModel>, val context:
     override fun onBindViewHolder(holder: ListViewHolder, position: Int) {
         holder.bind(listMyData[position])
 
-        holder.item.setOnClickListener {
-            val intent = Intent(context, DetailProduk::class.java)
-            intent.putExtra("PRODUK", listMyData[position].judul)
-            intent.putExtra("HARGA", listMyData[position].harga)
-            context.startActivity(intent)
-            Log.d(TAG, listMyData[position].judul)
-        }
     }
 
     override fun getItemCount(): Int = listMyData.size
 
     inner class ListViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val item: ConstraintLayout = itemView.findViewById(R.id.produk_item)
 
         fun bind(myData: ProdukModel) {
             with(itemView){
-                tv_judulproduk.text = myData.judul
-                tv_harga.text = myData.harga
+                tv_judulproduk.text = myData.productName
+                tv_harga.text = myData.price.toString()
+                iv_gambar.load(myData.images)
             }
         }
     }

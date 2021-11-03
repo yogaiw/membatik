@@ -1,16 +1,27 @@
-package com.asylum.membatik.dashboard
+package com.asylum.membatik.modules.account
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import com.asylum.membatik.R
+import com.asylum.membatik.dashboard.CourseActivity
+import com.asylum.membatik.dashboard.HomeActivity
+import com.asylum.membatik.model.UserModel
+import com.asylum.membatik.modules.login.MainActivity
+import com.google.firebase.Timestamp
 import kotlinx.android.synthetic.main.activity_account.*
-import kotlinx.android.synthetic.main.activity_course.*
+import java.util.concurrent.TimeUnit
 
-class AccountActivity : AppCompatActivity() {
+class AccountActivity : AppCompatActivity(), AccountContract.View {
+    private lateinit var presenter : AccountContract.Presenter
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_account)
+
+        presenter = AccountPresenter(this, this)
+        setOnClickListener()
+        presenter.getUserProfile()
 
         initNavbar()
     }
@@ -35,5 +46,25 @@ class AccountActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    override fun setOnClickListener() {
+        btn_logout.setOnClickListener {
+            presenter.logout()
+        }
+    }
+
+    override fun goToLogin() {
+        val intent = Intent(this, MainActivity::class.java)
+        startActivity(intent)
+        finishAffinity()
+    }
+
+    override fun setUserProfile(user: UserModel) {
+        tv_username.text = user.name
+    }
+
+    override fun setMemberSince(since: String) {
+        tv_member.text = since
     }
 }

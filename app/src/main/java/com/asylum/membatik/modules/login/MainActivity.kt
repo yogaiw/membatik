@@ -8,6 +8,7 @@ import com.asylum.membatik.R
 import com.asylum.membatik.dashboard.HomeActivity
 import com.asylum.membatik.modules.register.DaftarActivity
 import com.asylum.membatik.repository.local.LocalStorage
+import com.asylum.membatik.repository.remote.firestore.FirestoreProduct
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), LoginContract.View {

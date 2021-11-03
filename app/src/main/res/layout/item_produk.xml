@@ -16,6 +16,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins_bold"
         android:text="Batik Banyumas"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         android:textColor="@color/black"
         android:textSize="15sp"
         android:maxWidth="100dip"
@@ -28,6 +30,8 @@
         android:button="@color/transparent"
         android:textOn=""
         android:textOff=""
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/tv_judulproduk"
         android:background="@drawable/selector_fav" />
 
     <Button
@@ -39,10 +43,11 @@
 
     <ImageView
         android:id="@+id/iv_gambar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/dummy_image"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
         android:layout_marginTop="5sp"
+        tools:src="@drawable/dummy_image"
+        android:scaleType="fitCenter"
         app:layout_constraintTop_toBottomOf="@id/tv_judulproduk"/>
 
     <TextView
@@ -53,6 +58,7 @@
         android:textStyle="bold"
         android:layout_marginTop="5sp"
         android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/iv_gambar"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
