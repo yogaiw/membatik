@@ -3,15 +3,12 @@ package com.asylum.membatik.modules.account
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import com.asylum.membatik.R
-import com.asylum.membatik.dashboard.CourseActivity
+import com.asylum.membatik.modules.courses.CourseActivity
 import com.asylum.membatik.dashboard.HomeActivity
 import com.asylum.membatik.model.UserModel
 import com.asylum.membatik.modules.login.MainActivity
-import com.google.firebase.Timestamp
 import kotlinx.android.synthetic.main.activity_account.*
-import java.util.concurrent.TimeUnit
 
 class AccountActivity : AppCompatActivity(), AccountContract.View {
     private lateinit var presenter : AccountContract.Presenter

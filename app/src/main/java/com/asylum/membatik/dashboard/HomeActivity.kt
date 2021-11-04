@@ -11,6 +11,7 @@ import com.asylum.membatik.R
 import com.asylum.membatik.adapter.ProdukAdapter
 import com.asylum.membatik.model.ProdukModel
 import com.asylum.membatik.modules.account.AccountActivity
+import com.asylum.membatik.modules.courses.CourseActivity
 import com.asylum.membatik.modules.detailproduct.DetailProduk
 import com.asylum.membatik.modules.home.HomeContract
 import com.asylum.membatik.modules.home.HomePresenter

@@ -10,6 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Membatik">
         <activity
+            android:name=".modules.detailcourse.VideoPlayer"
+            android:screenOrientation="landscape"
+            android:exported="false" />
+        <activity
             android:name=".modules.detailproduct.DetailProduk"
             android:exported="true" />
         <activity
@@ -22,10 +26,10 @@
             android:name=".CustomBatikActivity"
             android:exported="true" />
         <activity
-            android:name=".CourseDetailActivity"
+            android:name=".modules.detailcourse.CourseDetailActivity"
             android:exported="true" />
         <activity
-            android:name=".dashboard.CourseActivity"
+            android:name=".modules.courses.CourseActivity"
             android:exported="true" />
         <activity
             android:name=".dashboard.HomeActivity"

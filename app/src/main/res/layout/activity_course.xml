@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:theme="@style/Theme.MaterialComponents.DayNight.NoActionBar"
     android:background="#F8F8F8"
-    tools:context=".dashboard.CourseActivity">
+    tools:context=".modules.courses.CourseActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/course_nav"

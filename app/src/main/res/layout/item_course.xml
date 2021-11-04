@@ -13,6 +13,9 @@
         android:id="@+id/course_image_header"
         android:layout_width="match_parent"
         android:layout_height="180sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         android:src="@drawable/dummy_course"
         android:scaleType="centerCrop"/>
 

@@ -1,50 +1,32 @@
-package com.asylum.membatik.dashboard
+package com.asylum.membatik.modules.courses
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asylum.membatik.R
 import com.asylum.membatik.adapter.CourseAdapter
+import com.asylum.membatik.dashboard.HomeActivity
 import com.asylum.membatik.model.CourseModel
 import com.asylum.membatik.modules.account.AccountActivity
+import com.asylum.membatik.modules.detailcourse.CourseDetailActivity
 import kotlinx.android.synthetic.main.activity_course.*
 
-class CourseActivity : AppCompatActivity() {
+class CourseActivity : AppCompatActivity(), CourseContract.View {
 
-    private val listCourse = ArrayList<CourseModel>()
+    lateinit var presenter : CourseContract.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_course)
 
+        presenter = CoursePresenter(this)
+        presenter.getCourses()
         navbarInit()
 
         rv_course.setHasFixedSize(true)
-        listCourse.addAll(getListCourse())
-        showRecyclerList()
-    }
 
-    private fun getListCourse(): ArrayList<CourseModel> {
-        val judulCourse = resources.getStringArray(R.array.course_judul)
-        val hargaCourse = resources.getStringArray(R.array.course_harga)
-
-        val listMainData = ArrayList<CourseModel>()
-
-        for (position in judulCourse.indices) {
-            val myData = CourseModel(
-                judulCourse[position],
-                hargaCourse[position]
-            )
-            listMainData.add(myData)
-        }
-        return listMainData
-    }
-
-    private fun showRecyclerList() {
-        rv_course.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
-        val listMyDataAdapter = CourseAdapter(listCourse, this)
-        rv_course.adapter = listMyDataAdapter
     }
 
     private fun navbarInit() {
@@ -67,5 +49,23 @@ class CourseActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+    override fun goToDetail(course: CourseModel) {
+        val intent = Intent(this, CourseDetailActivity::class.java)
+        intent.putExtra(CourseDetailActivity.EXTRA_COURSE, course)
+        startActivity(intent)
+    }
+
+    override fun setRecyclerView(courses: List<CourseModel>) {
+        rv_course.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL,false)
+        val listMyDataAdapter = CourseAdapter(courses){
+            goToDetail(it)
+        }
+        rv_course.adapter = listMyDataAdapter
+    }
+
+    override fun showMessage(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 }
