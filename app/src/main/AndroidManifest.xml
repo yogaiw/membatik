@@ -10,9 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Membatik">
         <activity
+            android:name=".modules.charts.ChartsActivity"
+            android:exported="true" />
+        <activity
             android:name=".modules.detailcourse.VideoPlayer"
-            android:screenOrientation="landscape"
-            android:exported="false" />
+            android:exported="false"
+            android:screenOrientation="landscape" />
         <activity
             android:name=".modules.detailproduct.DetailProduk"
             android:exported="true" />

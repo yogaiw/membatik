@@ -1,5 +1,6 @@
 package com.asylum.membatik.modules.detailproduct
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
@@ -7,6 +8,7 @@ import com.asylum.membatik.R
 import com.asylum.membatik.adapter.RadioColorAdapter
 import com.asylum.membatik.adapter.RadioSizeAdapter
 import com.asylum.membatik.model.ProdukModel
+import com.asylum.membatik.modules.charts.ChartsActivity
 import kotlinx.android.synthetic.main.activity_detail_produk.*
 
 class DetailProduk : AppCompatActivity(), DetailProductContract.View {
@@ -22,6 +24,10 @@ class DetailProduk : AppCompatActivity(), DetailProductContract.View {
 
         val produk = intent.getParcelableExtra<ProdukModel>(EXTRA_DATA_PRODUCT)!!
         setView(produk)
+
+        btn_tambah_keranjang.setOnClickListener {
+            startActivity(Intent(this, ChartsActivity::class.java))
+        }
 
     }
 

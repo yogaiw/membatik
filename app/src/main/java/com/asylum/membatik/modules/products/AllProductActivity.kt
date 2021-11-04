@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.asylum.membatik.R
 import com.asylum.membatik.adapter.ProdukAdapter
 import com.asylum.membatik.model.ProdukModel
+import com.asylum.membatik.modules.charts.ChartsActivity
 import com.asylum.membatik.modules.detailproduct.DetailProduk
 import kotlinx.android.synthetic.main.activity_all_product.*
 
@@ -23,6 +24,10 @@ class AllProductActivity : AppCompatActivity(), ProductsContract.View {
         setOnClickListener()
         rv_allproduct.setHasFixedSize(true)
         presenter.getProducts()
+
+        btn_goto_charts.setOnClickListener {
+            startActivity(Intent(this, ChartsActivity::class.java))
+        }
     }
 
     override fun setRecyclerView(products: List<ProdukModel>) {
