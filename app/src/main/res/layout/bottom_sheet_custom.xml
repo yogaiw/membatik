@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="30sp"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginBottom="10sp"
+        android:textColor="@color/black"
+        android:text="Masukkan nama produk custom anda"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1sp"
+        android:layout_marginBottom="20sp"
+        android:background="@color/grey"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="50sp"
+        android:paddingHorizontal="50sp"
+        android:layout_marginBottom="20sp"
+        android:background="@drawable/rounded_input_text_focused"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20sp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_medium"
+                android:layout_weight="1"
+                android:text="Harga"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Rp Sekian"/>
+    </LinearLayout>
+    <Button
+        android:id="@+id/btn_keranjang_custom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/white"
+        android:text="Tambah ke Keranjang"
+        android:background="@drawable/button_blue"/>
+</LinearLayout>
