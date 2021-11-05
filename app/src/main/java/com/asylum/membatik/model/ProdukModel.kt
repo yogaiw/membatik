@@ -9,7 +9,7 @@ import kotlinx.android.parcel.Parcelize
 @Parcelize
 data class ProdukModel(
     @DocumentId
-    var id : String = "",
+    var id: String = "",
     var productName: String = "",
     var description: String = "",
     var sizes: List<String> = listOf(),
@@ -17,7 +17,11 @@ data class ProdukModel(
     var images: String = "",
     var userId: String = "",
     var price: Int = 0,
-    var createdAt : Timestamp = Timestamp.now(),
+    var createdAt: Timestamp = Timestamp.now(),
     @Exclude @set:Exclude @get:Exclude
-    var user: UserModel? = null
-):Parcelable
+    var user: UserModel? = null,
+    @Exclude @set:Exclude @get:Exclude
+    var selectedColor: Int = -1,
+    @Exclude @set:Exclude @get:Exclude
+    var selectedSize: Int = -1
+) : Parcelable

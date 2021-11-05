@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import coil.load
 import com.asylum.membatik.R
 import com.asylum.membatik.model.ProdukModel
+import com.asylum.membatik.utils.toRupiah
 import kotlinx.android.synthetic.main.item_produk.view.*
 
 class ProdukAdapter(
@@ -32,7 +33,7 @@ class ProdukAdapter(
         fun bind(myData: ProdukModel, onClick: (product: ProdukModel) -> Unit) {
             with(itemView) {
                 tv_judulproduk.text = myData.productName
-                tv_harga.text = myData.price.toString()
+                tv_harga.text = myData.price.toRupiah()
                 iv_gambar.load(myData.images)
                 setOnClickListener {
                     onClick(myData)
