@@ -2,6 +2,7 @@ package com.asylum.membatik.modules.detailproduct
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import coil.load
 import com.asylum.membatik.R
@@ -9,6 +10,7 @@ import com.asylum.membatik.adapter.RadioColorAdapter
 import com.asylum.membatik.adapter.RadioSizeAdapter
 import com.asylum.membatik.model.ProdukModel
 import com.asylum.membatik.modules.charts.ChartsActivity
+import com.asylum.membatik.utils.toRupiah
 import kotlinx.android.synthetic.main.activity_detail_produk.*
 
 class DetailProduk : AppCompatActivity(), DetailProductContract.View {
@@ -16,17 +18,20 @@ class DetailProduk : AppCompatActivity(), DetailProductContract.View {
         const val EXTRA_DATA_PRODUCT = "extra_data_product"
     }
 
+    lateinit var presenter: DetailProductPresenter
+    lateinit var produk : ProdukModel
+
     var selectedSize = -1
     var selectedColor = -1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_produk)
 
-        val produk = intent.getParcelableExtra<ProdukModel>(EXTRA_DATA_PRODUCT)!!
+        produk = intent.getParcelableExtra<ProdukModel>(EXTRA_DATA_PRODUCT)!!
         setView(produk)
-
+        presenter = DetailProductPresenter(this, this)
         btn_tambah_keranjang.setOnClickListener {
-            startActivity(Intent(this, ChartsActivity::class.java))
+            presenter.addToCart(produk)
         }
 
     }
@@ -34,12 +39,13 @@ class DetailProduk : AppCompatActivity(), DetailProductContract.View {
     override fun setView(productModel: ProdukModel) {
         image_produk.load(productModel.images)
         tv_judul_produk_detail.text = productModel.productName
-        tv_harga_produk_detail.text = productModel.price.toString()
+        tv_harga_produk_detail.text = productModel.price.toRupiah()
 
 
         rvSize.adapter = RadioSizeAdapter(productModel.sizes) { index, adapter ->
             val oldValue = selectedSize
             selectedSize = index
+            produk.selectedSize = index
             rvSize.post {
                 rvSize.adapter!!.notifyItemChanged(selectedSize)
                 rvSize.adapter!!.notifyItemChanged(oldValue)
@@ -49,6 +55,7 @@ class DetailProduk : AppCompatActivity(), DetailProductContract.View {
         rvColor.adapter = RadioColorAdapter(productModel.colors) { index, adapter ->
             val oldValue = selectedColor
             selectedColor = index
+            produk.selectedColor = index
             rvColor.post {
                 rvColor.adapter!!.notifyItemChanged(selectedColor)
                 rvColor.adapter!!.notifyItemChanged(oldValue)
@@ -58,5 +65,13 @@ class DetailProduk : AppCompatActivity(), DetailProductContract.View {
         tv_deskripsi_text.text = productModel.description
 
 
+    }
+
+    override fun goToCartActivity() {
+        startActivity(Intent(this, ChartsActivity::class.java))
+    }
+
+    override fun showMessage(msg: String) {
+        Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
     }
 }
