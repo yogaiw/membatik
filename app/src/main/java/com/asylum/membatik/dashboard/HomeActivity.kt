@@ -13,6 +13,7 @@ import com.asylum.membatik.model.ProdukModel
 import com.asylum.membatik.modules.account.AccountActivity
 import com.asylum.membatik.modules.courses.CourseActivity
 import com.asylum.membatik.modules.detailproduct.DetailProduk
+import com.asylum.membatik.modules.fav.FavoriteActivity
 import com.asylum.membatik.modules.home.HomeContract
 import com.asylum.membatik.modules.home.HomePresenter
 import kotlinx.android.synthetic.main.activity_home.*
@@ -52,6 +53,10 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
                 }
                 R.id.page_course -> {
                     startActivity(Intent(this, CourseActivity::class.java))
+                    true
+                }
+                R.id.page_fav -> {
+                    startActivity(Intent(this, FavoriteActivity::class.java))
                     true
                 }
                 R.id.page_akun -> {
