@@ -105,7 +105,7 @@
     <Button
         android:id="@+id/btn_upload_produk"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0sp"
         android:layout_marginHorizontal="30sp"
         android:fontFamily="@font/poppins_bold"
         android:textColor="@color/black"
@@ -135,17 +135,33 @@
         android:background="@color/transparent"/>
 
     <Button
-        android:id="@+id/btn_setting"
+        android:id="@+id/btn_keranjang"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="30sp"
         android:fontFamily="@font/poppins_bold"
         android:textColor="@color/black"
-        android:text="Setting"
-        android:drawableLeft="@drawable/ic_btn_akun_setting"
+        android:text="Keranjang"
+        android:drawableLeft="@drawable/ic_btn_keranjang"
         android:drawableRight="@drawable/ic_btn_rounded_chevron"
         android:layout_marginTop="20sp"
         app:layout_constraintTop_toBottomOf="@id/btn_edit_akun"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@color/transparent"/>
+
+    <Button
+        android:id="@+id/btn_tracking"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="30sp"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:text="Tracking Pemesanan"
+        android:drawableLeft="@drawable/ic_btn_tracking"
+        android:drawableRight="@drawable/ic_btn_rounded_chevron"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toBottomOf="@id/btn_keranjang"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:background="@color/transparent"/>
@@ -160,7 +176,7 @@
         android:text="Sign Out"
         android:drawableLeft="@drawable/ic_logout"
         android:background="@drawable/button_blue"
-        app:layout_constraintStart_toStartOf="@id/btn_setting"
+        app:layout_constraintStart_toStartOf="@+id/btn_tracking"
         app:layout_constraintBottom_toTopOf="@id/account_nav"
         android:layout_marginBottom="30sp"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
