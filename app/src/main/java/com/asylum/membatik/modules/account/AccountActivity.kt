@@ -7,7 +7,10 @@ import com.asylum.membatik.R
 import com.asylum.membatik.modules.courses.CourseActivity
 import com.asylum.membatik.dashboard.HomeActivity
 import com.asylum.membatik.model.UserModel
+import com.asylum.membatik.modules.charts.ChartsActivity
+import com.asylum.membatik.modules.fav.FavoriteActivity
 import com.asylum.membatik.modules.login.MainActivity
+import com.asylum.membatik.modules.uploadproduk.UploadProdukActivity
 import kotlinx.android.synthetic.main.activity_account.*
 
 class AccountActivity : AppCompatActivity(), AccountContract.View {
@@ -21,6 +24,14 @@ class AccountActivity : AppCompatActivity(), AccountContract.View {
         presenter.getUserProfile()
 
         initNavbar()
+
+        btn_keranjang.setOnClickListener {
+            startActivity(Intent(this, ChartsActivity::class.java))
+        }
+
+        btn_upload_produk.setOnClickListener {
+            startActivity(Intent(this, UploadProdukActivity::class.java))
+        }
     }
 
     private fun initNavbar() {
@@ -34,6 +45,10 @@ class AccountActivity : AppCompatActivity(), AccountContract.View {
                 }
                 R.id.page_course -> {
                     startActivity(Intent(this, CourseActivity::class.java))
+                    true
+                }
+                R.id.page_fav -> {
+                    startActivity(Intent(this, FavoriteActivity::class.java))
                     true
                 }
                 R.id.page_akun -> {

@@ -11,6 +11,7 @@ import com.asylum.membatik.dashboard.HomeActivity
 import com.asylum.membatik.model.CourseModel
 import com.asylum.membatik.modules.account.AccountActivity
 import com.asylum.membatik.modules.detailcourse.CourseDetailActivity
+import com.asylum.membatik.modules.fav.FavoriteActivity
 import kotlinx.android.synthetic.main.activity_course.*
 
 class CourseActivity : AppCompatActivity(), CourseContract.View {
@@ -40,6 +41,10 @@ class CourseActivity : AppCompatActivity(), CourseContract.View {
                 }
                 R.id.page_course -> {
                     startActivity(Intent(this, CourseActivity::class.java))
+                    true
+                }
+                R.id.page_fav -> {
+                    startActivity(Intent(this, FavoriteActivity::class.java))
                     true
                 }
                 R.id.page_akun -> {
