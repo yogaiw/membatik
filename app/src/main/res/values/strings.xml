@@ -25,4 +25,10 @@
         <item>100000</item>
         <item>Free aww</item>
     </string-array>
+
+    <string-array name="notification_message">
+        <item>Kukira suhu ternyata suhu</item>
+        <item>uwiuwiuwiuwiu</item>
+        <item>Dapatkan Diskon 11.11 !</item>
+    </string-array>
 </resources>

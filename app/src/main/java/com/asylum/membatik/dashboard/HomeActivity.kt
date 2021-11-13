@@ -16,6 +16,7 @@ import com.asylum.membatik.modules.detailproduct.DetailProduk
 import com.asylum.membatik.modules.fav.FavoriteActivity
 import com.asylum.membatik.modules.home.HomeContract
 import com.asylum.membatik.modules.home.HomePresenter
+import com.asylum.membatik.modules.notification.NotificationActivity
 import kotlinx.android.synthetic.main.activity_home.*
 
 class HomeActivity : AppCompatActivity(), HomeContract.View {
@@ -39,6 +40,10 @@ class HomeActivity : AppCompatActivity(), HomeContract.View {
 
         tv_lihatsemua.setOnClickListener {
             startActivity(Intent(this, AllProductActivity::class.java))
+        }
+
+        btn_notif.setOnClickListener {
+            startActivity(Intent(this, NotificationActivity::class.java))
         }
     }
 
