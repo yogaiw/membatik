@@ -79,6 +79,7 @@
         </TableRow>
     </TableLayout>
     <Button
+        android:id="@+id/btn_checkout"
         android:layout_width="match_parent"
         android:layout_height="50sp"
         android:fontFamily="@font/poppins_bold"
