@@ -5,7 +5,8 @@ import com.asylum.membatik.model.UserModel
 import com.asylum.membatik.repository.local.LocalStorage
 import com.asylum.membatik.repository.remote.firestore.FirestoreUser
 
-class LoginPresenter(private val view: LoginContract.View, private val context: Context) : LoginContract.Presenter {
+class LoginPresenter(private val view: LoginContract.View, private val context: Context) :
+    LoginContract.Presenter {
     override fun doLogin(email: String, password: String) {
         view.processingLogin(true)
         if(email.isBlank() || password.isBlank()){
