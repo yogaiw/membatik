@@ -1,5 +1,6 @@
 package com.asylum.membatik
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -26,7 +27,7 @@ class DetailPembayaranActivity : AppCompatActivity() {
             if(info_transfer.visibility == View.GONE) {
                 Toast.makeText(this, "Pilih Metode Pembayaran", Toast.LENGTH_SHORT).show()
             } else {
-                // send to success order activity
+                startActivity(Intent(this, SuccessActivity::class.java))
             }
         }
     }

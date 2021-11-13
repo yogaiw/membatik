@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.asylum.membatik.R
+import com.asylum.membatik.TrackingActivity
 import com.asylum.membatik.modules.courses.CourseActivity
 import com.asylum.membatik.dashboard.HomeActivity
 import com.asylum.membatik.model.UserModel
@@ -35,6 +36,10 @@ class AccountActivity : AppCompatActivity(), AccountContract.View {
 
         btn_edit_akun.setOnClickListener {
             startActivity(Intent(this, EditAkunActivity::class.java))
+        }
+
+        btn_tracking.setOnClickListener {
+            startActivity(Intent(this, TrackingActivity::class.java))
         }
     }
 

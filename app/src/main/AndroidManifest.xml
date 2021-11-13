@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Membatik">
         <activity
+            android:name=".TrackingActivity"
+            android:exported="true" />
+        <activity
+            android:name=".SuccessActivity"
+            android:exported="true" />
+        <activity
             android:name=".modules.account.EditAlamatActivity"
             android:exported="true" />
         <activity
