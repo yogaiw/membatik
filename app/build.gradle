@@ -69,5 +69,5 @@ dependencies {
     // exoplayer videplayer
     implementation 'com.google.android.exoplayer:exoplayer:2.15.1'
 
-
+    implementation 'com.github.Almeros:android-gesture-detectors:v1.0.1'
 }

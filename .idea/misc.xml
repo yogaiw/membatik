@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.1" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/drawable/button_blue.xml" value="0.2703125" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/drawable/button_circle.xml" value="0.23192182410423454" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/drawable/button_circle_2.xml" value="0.23224755700325733" />
@@ -28,7 +29,6 @@
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_detail_produk.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_home.xml" value="0.3074074074074074" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_main.xml" value="0.25025641025641027" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/bottom_sheet_custom.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/bottom_sheet_payment.xml" value="0.25" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/fragment_notifications.xml" value="0.25416666666666665" />
@@ -37,16 +37,26 @@
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/item_radio_button_color.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/item_radio_button_size.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/menu/bottom_nav_menu.xml" value="0.13020833333333334" />
+        <entry key="app/src/main/res/drawable/button_circle.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/drawable/button_circle_2.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/drawable/button_circle_4.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/drawable/button_grey.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/drawable/button_selected_batik.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/drawable/selector_fav.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/drawable/selector_fav_detail.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/drawable/selector_motif_batik.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/drawable/selector_ukuran.xml" value="0.18854166666666666" />
+        <entry key="app/src/main/res/drawable/selector_warna.xml" value="0.18854166666666666" />
         <entry key="app/src/main/res/layout/activity_account.xml" value="0.17239583333333333" />
         <entry key="app/src/main/res/layout/activity_all_product.xml" value="0.17239583333333333" />
+        <entry key="app/src/main/res/layout/activity_custom_batik.xml" value="0.3140376266280753" />
         <entry key="app/src/main/res/layout/activity_daftar.xml" value="0.1" />
         <entry key="app/src/main/res/layout/activity_home.xml" value="0.17239583333333333" />
         <entry key="app/src/main/res/layout/item_produk.xml" value="0.33" />
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

@@ -6,7 +6,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.asylum.membatik.modules.products.AllProductActivity
-import com.asylum.membatik.CustomBatikActivity
+import com.asylum.membatik.modules.custombatik.CustomBatikActivity
 import com.asylum.membatik.R
 import com.asylum.membatik.adapter.ProdukAdapter
 import com.asylum.membatik.model.ProdukModel

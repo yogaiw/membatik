@@ -5,250 +5,303 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F8F8F8"
-    tools:context=".CustomBatikActivity">
+    tools:context=".modules.custombatik.CustomBatikActivity">
 
     <Button
         android:id="@+id/btn_back"
         android:layout_width="40sp"
         android:layout_height="40sp"
-        android:background="@drawable/ic_back"
         android:layout_marginLeft="15sp"
         android:layout_marginTop="20sp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"/>
+        android:background="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/header_custom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="@color/black"
         android:fontFamily="@font/poppins_bold"
-        android:textSize="18sp"
         android:text="Custom Batik"
-        app:layout_constraintTop_toTopOf="@id/btn_back"
+        android:textColor="@color/black"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"/>
-
-    <View
-        android:id="@+id/view_custom_bg"
+        app:layout_constraintTop_toTopOf="@id/btn_back" />
+    <FrameLayout
+        android:id="@+id/viewWrapper"
         android:layout_width="match_parent"
-        android:layout_height="360sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginHorizontal="30sp"
-        android:background="@drawable/view_custom_bg"
-        app:layout_constraintTop_toBottomOf="@+id/header_custom"/>
+        android:layout_height="0dp"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_custom">
+
+        <ImageView
+            android:id="@+id/batik"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="matrix"
+            android:src="@drawable/batik_biru"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_custom" />
+
+        <ImageView
+            android:id="@+id/tampak_depan"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/tampak_depan_1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_custom" />
+    </FrameLayout>
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/dummy_batik_custom"
-        app:layout_constraintTop_toTopOf="@id/view_custom_bg"
-        app:layout_constraintBottom_toBottomOf="@id/view_custom_bg"
-        app:layout_constraintStart_toStartOf="@id/view_custom_bg"
-        app:layout_constraintEnd_toEndOf="@id/view_custom_bg"/>
-
-    <TextView
-        android:id="@+id/tv_tampilan"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tampilan Batik"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="10sp"
-        app:layout_constraintStart_toStartOf="@id/view_custom_bg"
-        app:layout_constraintTop_toBottomOf="@id/view_custom_bg"
-        />
-    <RadioGroup
-        android:id="@+id/rg_tampilan"
+        android:id="@+id/tampakBelakang"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30sp"
-        android:orientation="horizontal"
-        android:layout_marginTop="5sp"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/tampak_belakang"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_tampilan">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Depan"
-            android:textColor="@drawable/selector_text_color"
-            android:button="@color/transparent"
-            android:background="@drawable/selector_btn_tampilan"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="5sp"
-            android:fontFamily="@font/poppins_medium"
-            android:padding="10sp"
-            android:text="Belakang"
-            android:textColor="@drawable/selector_text_color"
-            android:button="@color/transparent"
-            android:background="@drawable/selector_btn_tampilan"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginHorizontal="5sp"
-            android:fontFamily="@font/poppins_medium"
-            android:padding="10sp"
-            android:text="Kiri"
-            android:button="@color/transparent"
-            android:textColor="@drawable/selector_text_color"
-            android:background="@drawable/selector_btn_tampilan"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:textColor="@drawable/selector_text_color"
-            android:fontFamily="@font/poppins_medium"
-            android:text="Kanan"
-            android:button="@color/transparent"
-            android:background="@drawable/selector_btn_tampilan" />
-    </RadioGroup>
-
-    <TextView
-        android:id="@+id/tv_motif"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Motif Batik"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="10sp"
-        app:layout_constraintStart_toStartOf="@id/rg_tampilan"
-        app:layout_constraintTop_toBottomOf="@id/rg_tampilan"/>
-
-    <RadioGroup
-        android:id="@+id/rg_motif"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30sp"
-        android:orientation="horizontal"
-        android:layout_marginTop="5sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_motif">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="@drawable/selector_btn_tampilan"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="@drawable/selector_btn_tampilan"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="@drawable/selector_btn_tampilan"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="@drawable/selector_btn_tampilan"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="@drawable/selector_btn_tampilan"/>
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@id/header_custom"/>
 
-    <TextView
-        android:id="@+id/tv_warna"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Warna Batik"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/black"
-        android:layout_marginTop="10sp"
-        app:layout_constraintStart_toStartOf="@id/rg_motif"
-        app:layout_constraintTop_toBottomOf="@id/rg_motif"/>
-    <RadioGroup
-        android:id="@+id/rg_warna"
+    <ImageView
+        android:id="@+id/tampakKiri"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="30sp"
-        android:orientation="horizontal"
-        android:layout_marginTop="5sp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/samping_kiri"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_warna">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="#8C0000"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="#FFC107"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="#4CAF50"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="#FF3535"/>
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="50sp"
-            android:layout_weight="1"
-            android:padding="10sp"
-            android:layout_marginHorizontal="5sp"
-            android:button="@color/transparent"
-            android:background="#600AA4"/>
-    </RadioGroup>
+        app:layout_constraintTop_toBottomOf="@id/header_custom" />
 
-    <Button
-        android:id="@+id/btn_next_custom"
+    <ImageView
+        android:id="@+id/tampakKanan"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/poppins_bold"
-        android:textColor="@color/white"
-        android:text="Selanjutnya"
-        android:layout_marginTop="20sp"
-        android:layout_marginHorizontal="30sp"
-        android:background="@drawable/button_blue"
-        app:layout_constraintTop_toBottomOf="@id/rg_warna"/>
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/samping_kanan"
+        android:visibility="gone"
+        app:layout_constraintDimensionRatio="1:1"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_custom" />
+    <View
+        android:id="@+id/viewHelper"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_custom" />
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/viewHelper">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+
+
+            <TextView
+                android:id="@+id/tv_tampilan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Tampilan Batik"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/rg_tampilan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_tampilan">
+
+                <RadioButton
+                    android:id="@+id/rgDepan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_tampilan"
+                    android:button="@color/transparent"
+                    android:checked="true"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10sp"
+                    android:text="Depan"
+                    android:textColor="@drawable/selector_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rgBelakang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_tampilan"
+                    android:button="@color/transparent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10sp"
+                    android:text="Belakang"
+                    android:textColor="@drawable/selector_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rgKiri"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_tampilan"
+                    android:button="@color/transparent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10sp"
+                    android:text="Kiri"
+                    android:textColor="@drawable/selector_text_color" />
+
+                <RadioButton
+                    android:id="@+id/rgKanan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5sp"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_tampilan"
+                    android:button="@color/transparent"
+                    android:fontFamily="@font/poppins_medium"
+                    android:padding="10sp"
+                    android:text="Kanan"
+                    android:textColor="@drawable/selector_text_color" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_motif"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Motif Batik"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/rg_tampilan"
+                app:layout_constraintTop_toBottomOf="@id/rg_tampilan" />
+
+            <RadioGroup
+                android:id="@+id/rg_motif"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_motif">
+
+
+
+                    <RadioButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/batik_biru"
+                        android:button="@color/transparent"
+                        android:checked="true"
+                        android:foreground="@drawable/selector_motif_batik" />
+
+
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/tv_warna"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10sp"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Warna Batik"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="@id/rg_motif"
+                app:layout_constraintTop_toBottomOf="@id/rg_motif" />
+
+            <RadioGroup
+                android:id="@+id/rg_warna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="5sp"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_warna">
+
+
+
+                    <RadioButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/batik_biru"
+                        android:button="@color/transparent"
+                        android:layout_marginEnd="8dp"
+                        android:foreground="@drawable/selector_motif_batik" />
+
+
+                    <RadioButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/batik_merah"
+                        android:button="@color/transparent"
+                        android:layout_marginEnd="8dp"
+                        android:foreground="@drawable/selector_motif_batik" />
+
+
+                    <RadioButton
+                        android:layout_width="64dp"
+                        android:layout_height="64dp"
+                        android:background="@drawable/batik_hijau"
+                        android:button="@color/transparent"
+                        android:layout_marginEnd="8dp"
+                        android:foreground="@drawable/selector_motif_batik" />
+
+            </RadioGroup>
+
+            <Button
+                android:id="@+id/btn_next_custom"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30sp"
+                android:layout_marginTop="20sp"
+
+                android:background="@drawable/button_blue"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Selanjutnya"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/rg_warna" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
