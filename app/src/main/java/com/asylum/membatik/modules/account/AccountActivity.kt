@@ -32,6 +32,10 @@ class AccountActivity : AppCompatActivity(), AccountContract.View {
         btn_upload_produk.setOnClickListener {
             startActivity(Intent(this, UploadProdukActivity::class.java))
         }
+
+        btn_edit_akun.setOnClickListener {
+            startActivity(Intent(this, EditAkunActivity::class.java))
+        }
     }
 
     private fun initNavbar() {

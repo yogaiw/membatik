@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.account.EditAkunActivity">
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="40sp"
+        android:layout_height="40sp"
+        android:background="@drawable/ic_back"
+        android:layout_marginLeft="15sp"
+        android:layout_marginTop="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/header_edit_akun"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:fontFamily="@font/poppins_bold"
+        android:textSize="18sp"
+        android:text="Edit Akun"
+        app:layout_constraintTop_toTopOf="@id/btn_back"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <Button
+        android:id="@+id/btn_foto_profil"
+        android:layout_width="100sp"
+        android:layout_height="100sp"
+        android:layout_marginStart="30sp"
+        android:layout_marginTop="20sp"
+        android:text="Tambah Foto"
+        android:padding="10sp"
+        android:background="@drawable/dash_box"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/header_edit_akun"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:text="Upload Foto Profil"
+        android:layout_marginStart="20sp"
+        app:layout_constraintTop_toTopOf="@id/btn_foto_profil"
+        app:layout_constraintBottom_toBottomOf="@id/btn_foto_profil"
+        app:layout_constraintStart_toEndOf="@id/btn_foto_profil"/>
+
+    <Button
+        android:id="@+id/btn_edit_profil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:text="Profil Saya"
+        android:layout_marginTop="30sp"
+        android:layout_marginHorizontal="30sp"
+        android:drawableLeft="@drawable/ic_btn_editakun"
+        android:drawableRight="@drawable/ic_btn_rounded_chevron"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_foto_profil"/>
+
+    <Button
+        android:id="@+id/btn_edit_alamat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:text="Alamat Saya"
+        android:layout_marginTop="15sp"
+        android:layout_marginHorizontal="30sp"
+        android:drawableLeft="@drawable/ic_btn_editakun"
+        android:drawableRight="@drawable/ic_btn_rounded_chevron"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_edit_profil"/>
+
+    <Button
+        android:id="@+id/btn_edit_rekening"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:fontFamily="@font/poppins_bold"
+        android:textColor="@color/black"
+        android:text="Rekening Saya"
+        android:layout_marginTop="15sp"
+        android:layout_marginHorizontal="30sp"
+        android:drawableLeft="@drawable/ic_btn_editakun"
+        android:drawableRight="@drawable/ic_btn_rounded_chevron"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_edit_alamat"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
