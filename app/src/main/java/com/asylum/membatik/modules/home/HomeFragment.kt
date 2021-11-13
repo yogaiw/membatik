@@ -13,6 +13,7 @@ import com.asylum.membatik.adapter.ProdukAdapter
 import com.asylum.membatik.model.ProdukModel
 import com.asylum.membatik.modules.custombatik.CustomBatikActivity
 import com.asylum.membatik.modules.detailproduct.DetailProduk
+import com.asylum.membatik.modules.notification.NotificationActivity
 import com.asylum.membatik.modules.products.AllProductActivity
 import kotlinx.android.synthetic.main.fragment_home.*
 
@@ -50,6 +51,11 @@ class HomeFragment : Fragment(), HomeContract.View {
 
         tv_lihatsemua.setOnClickListener {
             startActivity(Intent(requireContext(), AllProductActivity::class.java))
+        }
+
+        btn_notif.setOnClickListener {
+            startActivity(Intent(requireContext(), NotificationActivity::class.java))
+
         }
     }
 

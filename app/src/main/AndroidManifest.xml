@@ -30,9 +30,8 @@
         <activity
             android:name=".modules.notification.NotificationActivity"
             android:exported="true" />
+
         <activity
-            android:name=".modules.fav.FavoriteActivity"
-            android:exported="true" />
             android:name=".modules.BaseActivity"
             android:exported="false" />
         <activity
@@ -58,12 +57,7 @@
         <activity
             android:name=".modules.detailcourse.CourseDetailActivity"
             android:exported="true" />
-        <activity
-            android:name=".modules.courses.CourseActivity"
-            android:exported="true" />
-        <activity
-            android:name=".dashboard.HomeActivity"
-            android:exported="true" />
+
         <activity
             android:name=".modules.register.DaftarActivity"
             android:exported="true" />

@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.app.ActivityCompat.finishAffinity
 import com.asylum.membatik.R
+import com.asylum.membatik.TrackingActivity
 import com.asylum.membatik.model.UserModel
 import com.asylum.membatik.modules.charts.ChartsActivity
 import com.asylum.membatik.modules.login.MainActivity
@@ -40,6 +41,13 @@ class AccountFragment : Fragment(), AccountContract.View {
 
         btn_upload_produk.setOnClickListener {
             startActivity(Intent(requireContext(), UploadProdukActivity::class.java))
+        }
+
+        btn_edit_akun.setOnClickListener {
+            startActivity(Intent(requireContext(), EditAkunActivity::class.java))
+        }
+        btn_tracking.setOnClickListener {
+            startActivity(Intent(requireContext(), TrackingActivity::class.java))
         }
     }
 

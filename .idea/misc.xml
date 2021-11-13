@@ -27,24 +27,16 @@
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_course_detail.xml" value="0.24270833333333333" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_custom_batik.xml" value="0.24010416666666667" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_daftar.xml" value="0.2490740740740741" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_detail_pembayaran.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_detail_produk.xml" value="0.18" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_edit_akun.xml" value="0.2243421052631579" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_edit_alamat.xml" value="0.2243421052631579" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_edit_profil.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_favorite.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_home.xml" value="0.2221498371335505" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_main.xml" value="0.25025641025641027" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_notification.xml" value="0.2243421052631579" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_success.xml" value="0.2243421052631579" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_tracking.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/activity_upload_produk.xml" value="0.22" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/bottom_sheet_custom.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/bottom_sheet_payment.xml" value="0.25" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/fragment_home.xml" value="0.25416666666666665" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/fragment_notifications.xml" value="0.25416666666666665" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/item_charts.xml" value="0.2243421052631579" />
-        <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/item_notification.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/item_produk.xml" value="0.35520833333333335" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/item_radio_button_color.xml" value="0.2243421052631579" />
         <entry key="..\:/KULIAH/membatik/app/src/main/res/layout/item_radio_button_size.xml" value="0.2243421052631579" />
@@ -70,6 +62,7 @@
         <entry key="app/src/main/res/layout/activity_upload_produk.xml" value="0.33" />
         <entry key="app/src/main/res/layout/fragment_account.xml" value="0.17239583333333333" />
         <entry key="app/src/main/res/layout/fragment_favorite.xml" value="0.17239583333333333" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.17239583333333333" />
         <entry key="app/src/main/res/layout/item_produk.xml" value="0.33" />
       </map>
     </option>
