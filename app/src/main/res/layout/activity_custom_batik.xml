@@ -261,6 +261,7 @@
 
 
                     <RadioButton
+                        android:id="@+id/biru"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/batik_biru"
@@ -270,6 +271,7 @@
 
 
                     <RadioButton
+                        android:id="@+id/merah"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/batik_merah"
@@ -279,6 +281,7 @@
 
 
                     <RadioButton
+                        android:id="@+id/hijau"
                         android:layout_width="64dp"
                         android:layout_height="64dp"
                         android:background="@drawable/batik_hijau"

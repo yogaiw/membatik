@@ -5,10 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.asylum.membatik.R
-import com.asylum.membatik.dashboard.HomeActivity
+import com.asylum.membatik.modules.BaseActivity
 import com.asylum.membatik.modules.register.DaftarActivity
 import com.asylum.membatik.repository.local.LocalStorage
-import com.asylum.membatik.repository.remote.firestore.FirestoreProduct
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity(), LoginContract.View {
@@ -53,7 +52,7 @@ class MainActivity : AppCompatActivity(), LoginContract.View {
     }
 
     override fun goToDashboard() {
-        val intent = Intent(this, HomeActivity::class.java)
+        val intent = Intent(this, BaseActivity::class.java)
         startActivity(intent)
         finishAffinity()
     }

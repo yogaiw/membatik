@@ -10,11 +10,9 @@ class DetailProductPresenter(
 ) : DetailProductContract.Presenter {
     override fun addToCart(productModel: ProdukModel) {
         when {
-            productModel.selectedColor == -1 -> {
-                view.showMessage("Harap Pilih Ukuran")
-            }
+
             productModel.selectedSize == -1 -> {
-                view.showMessage("Harap Pilih Warna")
+                view.showMessage("Harap Pilih Ukuran")
             }
             else -> {
                 LocalStorage.addCart(context, productModel)

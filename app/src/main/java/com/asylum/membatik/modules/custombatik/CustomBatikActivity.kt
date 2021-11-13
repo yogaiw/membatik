@@ -10,6 +10,7 @@ import android.view.View
 import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.doOnLayout
+import coil.load
 import com.almeros.android.multitouch.MoveGestureDetector
 import com.asylum.membatik.R
 import com.asylum.membatik.modules.charts.ChartsActivity
@@ -35,6 +36,21 @@ class CustomBatikActivity : AppCompatActivity() {
 
         bottomSheetCustom.findViewById<Button>(R.id.btn_keranjang_custom)?.setOnClickListener {
             startActivity(Intent(this, ChartsActivity::class.java))
+        }
+
+        rg_warna.setOnCheckedChangeListener { radioGroup, i ->
+            when(i) {
+                biru.id -> {
+                    batik.load(biru.background)
+                }
+                merah.id -> {
+                    batik.load(merah.background)
+                }
+                hijau.id -> {
+                    batik.load(hijau.background)
+                }
+            }
+
         }
 
         rg_tampilan.setOnCheckedChangeListener { radioGroup, i ->

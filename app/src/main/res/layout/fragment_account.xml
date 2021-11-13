@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".modules.account.AccountFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_back"
+            android:layout_width="40sp"
+            android:layout_height="40sp"
+            android:layout_marginLeft="15sp"
+            android:layout_marginTop="20sp"
+            android:background="@drawable/ic_back"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/header_akun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Akun"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@id/btn_back"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/btn_back" />
+
+        <Button
+            android:layout_width="30sp"
+            android:layout_height="30sp"
+            android:layout_marginRight="15sp"
+            android:background="@drawable/ic_chart"
+            app:layout_constraintBottom_toBottomOf="@id/header_akun"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/header_akun" />
+
+        <ImageView
+            android:id="@+id/iv_profile"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
+            android:layout_marginStart="30sp"
+            android:layout_marginTop="30sp"
+            android:src="@drawable/ic_default_user"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/header_akun" />
+
+        <View
+            android:id="@+id/view_separator"
+            android:layout_width="2sp"
+            android:layout_height="100sp"
+            android:layout_marginStart="30sp"
+            android:background="@color/grey"
+            app:layout_constraintBottom_toBottomOf="@id/iv_profile"
+            app:layout_constraintStart_toEndOf="@id/iv_profile"
+            app:layout_constraintTop_toTopOf="@id/iv_profile" />
+
+        <TextView
+            android:id="@+id/tv_membersejak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Member Sejak"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/view_separator"
+            app:layout_constraintTop_toTopOf="@id/view_separator" />
+
+        <TextView
+            android:id="@+id/tv_member"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20sp"
+            android:fontFamily="@font/poppins_medium"
+            android:text="2 Bulan lalu"
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/view_separator"
+            app:layout_constraintTop_toBottomOf="@id/tv_membersejak" />
+
+        <TextView
+            android:id="@+id/tv_username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Reza Wibu"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@id/iv_profile"
+            app:layout_constraintTop_toBottomOf="@id/iv_profile" />
+
+        <Button
+            android:id="@+id/btn_upload_produk"
+            android:layout_width="match_parent"
+            android:layout_height="0sp"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="20sp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_btn_upload"
+            android:drawableRight="@drawable/ic_btn_rounded_chevron"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Upload Produk"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_username" />
+
+        <Button
+            android:id="@+id/btn_edit_akun"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="20sp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_btn_editakun"
+            android:drawableRight="@drawable/ic_btn_rounded_chevron"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Edit Akun"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_upload_produk" />
+
+        <Button
+            android:id="@+id/btn_keranjang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="20sp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_btn_keranjang"
+            android:drawableRight="@drawable/ic_btn_rounded_chevron"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Keranjang"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_edit_akun" />
+
+        <Button
+            android:id="@+id/btn_tracking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="30sp"
+            android:layout_marginTop="20sp"
+            android:background="@color/transparent"
+            android:drawableLeft="@drawable/ic_btn_tracking"
+            android:drawableRight="@drawable/ic_btn_rounded_chevron"
+            android:fontFamily="@font/poppins_bold"
+            android:text="Tracking Pemesanan"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_keranjang" />
+
+        <Button
+            android:id="@+id/btn_logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="30sp"
+            android:background="@drawable/button_blue"
+            android:drawableLeft="@drawable/ic_logout"
+            android:fontFamily="@font/poppins_bold"
+            android:paddingHorizontal="30sp"
+            android:text="Sign Out"
+            android:textColor="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/btn_tracking"
+            app:layout_constraintTop_toBottomOf="@id/btn_tracking" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

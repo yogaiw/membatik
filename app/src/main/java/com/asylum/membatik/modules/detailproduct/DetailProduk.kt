@@ -22,7 +22,6 @@ class DetailProduk : AppCompatActivity(), DetailProductContract.View {
     lateinit var produk : ProdukModel
 
     var selectedSize = -1
-    var selectedColor = -1
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_detail_produk)
@@ -52,15 +51,7 @@ class DetailProduk : AppCompatActivity(), DetailProductContract.View {
             }
         }
 
-        rvColor.adapter = RadioColorAdapter(productModel.colors) { index, adapter ->
-            val oldValue = selectedColor
-            selectedColor = index
-            produk.selectedColor = index
-            rvColor.post {
-                rvColor.adapter!!.notifyItemChanged(selectedColor)
-                rvColor.adapter!!.notifyItemChanged(oldValue)
-            }
-        }
+
 
         tv_deskripsi_text.text = productModel.description
 

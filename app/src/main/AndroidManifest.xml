@@ -10,8 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Membatik">
         <activity
-            android:name=".modules.fav.FavoriteActivity"
-            android:exported="true" />
+            android:name=".modules.BaseActivity"
+            android:exported="false" />
         <activity
             android:name=".modules.uploadproduk.UploadProdukActivity"
             android:exported="true" />
@@ -28,20 +28,12 @@
         <activity
             android:name=".modules.products.AllProductActivity"
             android:exported="true" />
-        <activity
-            android:name=".modules.account.AccountActivity"
-            android:exported="true" />
+
         <activity
             android:name=".modules.custombatik.CustomBatikActivity"
             android:exported="true" />
         <activity
             android:name=".modules.detailcourse.CourseDetailActivity"
-            android:exported="true" />
-        <activity
-            android:name=".modules.courses.CourseActivity"
-            android:exported="true" />
-        <activity
-            android:name=".dashboard.HomeActivity"
             android:exported="true" />
         <activity
             android:name=".modules.register.DaftarActivity"
